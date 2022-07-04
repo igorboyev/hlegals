@@ -1,0 +1,134 @@
+@use "../../../presets/index" as *;
+@use "../../../mixins/index" as *;
+
+.cases {
+  padding-top: 40px;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__grid {
+    display: grid;
+    background-color: $color-gray-bg;
+    border-radius: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+
+    @include ul-min {
+      grid-template-areas: "ttl biz tpg" "hll biz tpg" "look adt clk";
+    }
+
+    @include ul-xs {
+      grid-template-areas: "ttl ttl" "hll biz" "tpg look" "adt clk";
+    }
+
+    @include xs-xx {
+      grid-template-areas: "ttl" "hll" "biz" "tpg" "look" "adt" "clk";
+    }
+  }
+
+  & .case-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid $color-white;
+    padding: 20px;
+    gap: $gap;
+
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+      color: $color-primary-soft;
+
+      &-main {
+        color: $color-accent;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+      }
+    }
+
+    &__description {
+      font-size: 18px;
+      line-height: 26px;
+      color: $color-gray-text;
+    }
+  }
+
+  &__title {
+    grid-area: ttl;
+    min-height: 57px;
+
+    @include ul-min {
+      border-radius: 12px 0 0 0;
+    }
+    @include ul-xs {
+      border-radius: 12px 12px 0 0;
+    }
+  }
+
+  & .hilel {
+    grid-area: hll;
+    @include ul-min {
+      min-height: 198px;
+    }
+  }
+
+  & .biz {
+    grid-area: biz;
+
+    @include ul-min {
+      max-width: 454px;
+      min-height: 255px;
+    }
+  }
+
+  & .tapgerine {
+    grid-area: tpg;
+
+    @include ul-min {
+      max-width: 454px;
+      min-height: 255px;
+      border-radius: 0 12px 0 0;
+    }
+  }
+
+  & .look {
+    grid-area: look;
+
+    @include ul-min {
+      max-width: 320px;
+      min-height: 198px;
+      border-radius: 0 0 0 12px;
+    }
+  }
+
+  & .adtelligent {
+    grid-area: adt;
+
+
+    @include ul-min {
+      transform: translateX(-120px);
+      margin-right: -17px;
+      max-width: 459px;
+      min-height: 198px;
+    }
+    @include ul-xs {
+      border-radius: 0 0 0 12px;
+
+    }
+  }
+
+  & .clikky {
+    grid-area: clk;
+    border-radius: 0 0 12px 0;
+
+
+    @include ul-min {
+      margin-right: -104px;
+      transform: translateX(-104px);
+      max-width: 544px;
+      min-height: 198px;
+    }
+  }
+}

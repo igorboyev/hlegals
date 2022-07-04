@@ -1,0 +1,91 @@
+@use "../../../presets/index" as *;
+@use "../../../mixins/index" as *;
+
+.clients {
+  padding-top: 30px;
+
+  &__container {
+
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-primary;
+    padding-bottom: 30px;
+  }
+
+  &__items {
+    display: grid;
+    @include md-min {
+      grid-template-areas: "hll biz tpg look" "org  adt clk eco" "infra city art card";
+
+    }
+
+    @include md-xs {
+      grid-template-areas: "hll biz tpg" "look eco clk" "adt org infra" "city art card";
+
+    }
+    @include xs-xx {
+      grid-template-areas: "hll biz" "tpg look" "eco clk" "org infra" "card art" "city adt";
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  & .hillel {
+    grid-area: hll;
+  }
+
+  & .biz {
+    grid-area: biz;
+  }
+
+  & .tapgerine {
+    grid-area: tpg;
+  }
+
+  & .look {
+    grid-area: look;
+  }
+
+  & .orangear {
+    grid-area: org;
+  }
+
+  & .adtelligent {
+    grid-area: adt;
+  }
+
+  & .clickky {
+    grid-area: clk;
+  }
+
+  & .eco {
+    grid-area: eco;
+  }
+
+  & .infra {
+    grid-area: infra;
+  }
+
+  & .city {
+    grid-area: city;
+  }
+
+  & .art {
+    grid-area: art;
+  }
+
+  & .card {
+    grid-area: card;
+  }
+}
