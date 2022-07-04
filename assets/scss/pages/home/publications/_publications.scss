@@ -3,6 +3,7 @@
 
 .publications {
   padding-top: 40px;
+  margin-bottom: -200px;
   @include xs-xx {
     background: $color-gray-bg;
   }
@@ -40,29 +41,40 @@
   }
 
   &__grid {
-
-    display: grid;
+    column-count: 3;
+    //display: grid;
     padding-top: 40px;
     gap: 40px;
-    overflow: hidden;
+    //overflow: hidden;
+    //max-height: 740px;
 
-    @include ul-min {
-      grid-template-columns: repeat(3, 1fr);
-      max-height: 760px;
-    }
-
-    @include ul-md {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    //@include ul-min {
+    //  grid-template-columns: repeat(3, 1fr);
+    //  max-height: 760px;
+    //}
+    //
+    //@include ul-md {
+    //  grid-template-columns: repeat(2, 1fr);
+    //}
 
     @include md-xx {
       display: flex;
       flex-direction: column;
     }
 
+
+    .item1 {
+      height: 305px;
+    }
+
+    .item2 {
+      height: 460px;
+    }
+
     .item3 {
+      height: 500px;
       @include ul-md {
-        margin-top: -200px;
+        //margin-top: -200px;
       }
       @include xs-xx {
         display: none;
@@ -70,19 +82,23 @@
     }
 
     .item4 {
+      height: 440px;
+
       @include ul-min {
-        margin-top: -185px;
+        //margin-top: -185px;
       }
     }
 
     .item5 {
-      margin-top: -50px;
+      height: 280px;
+      //margin-top: -50px;
       @include ul-xx {
         display: none;
       }
     }
 
     .item6 {
+      height: 243px;
       @include ul-xx {
         display: none;
       }
@@ -155,10 +171,15 @@
   }
 
   &__shade {
-    margin-top: -185px;
-    position: relative;
+    //margin-top: -185px;
+    //position: relative;
+    display: flex;
     height: 200px;
     background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+    position: relative;
+    bottom: 200px;
+    align-items: flex-end;
+    justify-content: center;
 
     @include xs-xx {
       display: none;
@@ -170,16 +191,18 @@
     display: flex;
     justify-content: center;
     color: $color-white;
-    width: 250px;
-    min-height: 50px;
+    min-width: 250px;
+    height: 50px;
     background: $color-active;
     box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
     border-radius: 12px;
     border: none;
-    margin: -110px auto;
     position: relative;
+    bottom: 40px;
+    //margin: -110px auto;
+    //position: relative;
     @include xs-xx {
-      margin: -40px auto 40px;
+      //margin: -40px auto 40px;
     }
   }
 
