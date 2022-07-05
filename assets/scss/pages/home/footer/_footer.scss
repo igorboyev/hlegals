@@ -2,7 +2,6 @@
 @use "../../../mixins/index" as *;
 
 .footer {
-  margin-top: 170px;
   padding-bottom: 40px;
   @include xs-xx {
     margin-top: 0;
