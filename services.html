@@ -10,10 +10,11 @@
 </head>
 <body>
 
-<header class="page-header">
-  <div class="page-header__grid">
-    <div class="page-header__logo">
-      <a href="index.html"><img alt="Site logo" class="page-header__logo-image" src="assets/img/LogoMin.svg">
+<header class="services-header">
+  <div class="services-header__grid">
+    <div class="services-header__logo">
+      <a href="index.html">
+        <img alt="Site logo" class="services-header__logo-image" src="assets/img/Services-Logo.svg">
       </a>
     </div>
     <nav class="page-header__menu menu">
@@ -24,13 +25,13 @@
       </div>
       <ul class="menu__list">
         <li class="menu__item"><a class="menu__link" href="">про нас</a></li>
-        <li class="menu__item"><a class="menu__link" href="">послуги</a></li>
+        <li class="menu__item"><a class="menu__link active-header-list" href="">послуги</a></li>
         <li class="menu__item"><a class="menu__link" href="">команда</a></li>
         <li class="menu__item"><a class="menu__link" href="">публікації</a></li>
         <li class="menu__item"><a class="menu__link" href="">контакти</a></li>
       </ul>
     </nav>
-    <nav class="page-header__actions actions">
+    <nav class="page-header__actions actions-secondary">
       <div class="actions__languages">
         <a class="actions__language-link active" href="">УК</a>
         <a class="actions__language-link" href="">РУ</a>
@@ -49,21 +50,9 @@
       </div>
     </nav>
   </div>
-</header>
 
-<main class="page-main">
-
-  <section class="services">
+  <section class="services services-header__secondary">
     <div class="services__container">
-      <div>
-        <strong>
-          <a class="services__page-link" href="">послуги
-            <svg fill="none" height="12" viewBox="0 0 8 12" width="8" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1.5L6 6L1.5 10.5" stroke-width="2"/>
-            </svg>
-          </a>
-        </strong>
-      </div>
       <h2 class="services__title">Що ми вміємо робити краще за інших?</h2>
       <div class="services__grid">
         <div class="service-item">
@@ -117,6 +106,9 @@
       </div>
     </div>
   </section>
+</header>
+
+<main class="page-main">
 
   <section class="cases">
     <div class="cases__container">

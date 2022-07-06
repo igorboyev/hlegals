@@ -1,0 +1,65 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.services-header {
+  background: linear-gradient($bg-gradient2);
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__logo-image {
+    width: 100%;
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: actions;
+  }
+
+  &__secondary {
+    padding-top: 73px;
+  }
+
+  &__grid {
+    display: grid;
+
+    @extend %container;
+    gap: $gap;
+    grid-template-columns: auto 1fr;
+    @include sm-min {
+      padding-top: 50px;
+
+      grid-template-areas: "logo actions" "logo menu";
+    }
+    @include md {
+      padding-top: $gap;
+
+      grid-template-areas: "actions actions" "logo menu";
+    }
+  }
+
+  .actions-secondary {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+    @include md-min {
+      justify-content: flex-end;
+    }
+
+    @include md-sm {
+      justify-content: center;
+    }
+
+    @include sm {
+      justify-content: space-between;
+      a {
+        color: $color-gray-text;
+      }
+    }
+  }
+}
