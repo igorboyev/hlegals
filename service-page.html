@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
-  <title>Hlegals | Головна</title>
+  <title>Hlegals</title>
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/img/favicon.svg" rel="icon">
 </head>
 <body>
 
-<header class="page-header">
-  <div class="page-header__grid">
-    <div class="page-header__logo">
-      <a href="index.html"><img alt="Site logo" class="page-header__logo-image" src="assets/img/LogoMin.svg">
+<header class="services-header">
+  <div class="services-header__grid">
+    <div class="services-header__logo">
+      <a href="index.html">
+        <img alt="Site logo" class="services-header__logo-image" src="assets/img/Services-Logo.svg">
       </a>
     </div>
     <nav class="page-header__menu menu">
@@ -24,13 +25,13 @@
       </div>
       <ul class="menu__list">
         <li class="menu__item"><a class="menu__link" href="">про нас</a></li>
-        <li class="menu__item"><a class="menu__link" href="services.html">послуги</a></li>
+        <li class="menu__item"><a class="menu__link active-header-list" href="">послуги</a></li>
         <li class="menu__item"><a class="menu__link" href="">команда</a></li>
         <li class="menu__item"><a class="menu__link" href="">публікації</a></li>
         <li class="menu__item"><a class="menu__link" href="">контакти</a></li>
       </ul>
     </nav>
-    <nav class="page-header__actions actions">
+    <nav class="page-header__actions actions-secondary">
       <div class="actions__languages">
         <a class="actions__language-link active" href="">УК</a>
         <a class="actions__language-link" href="">РУ</a>
@@ -49,79 +50,9 @@
       </div>
     </nav>
   </div>
-  <div class="page-header__content">
-    <img alt="" class="page-header__content-image" src="assets/img/SymbolLongLeg.svg">
-    <h1 class="page-header__content-title">системний адміністратор правових рішень</h1>
-  </div>
-  <div class="page-header__button">
-    <img alt="scroll" class="page-header__button-image" src="assets/img/ScrollDown.svg">
-  </div>
-</header>
 
-<main class="page-main">
-
-  <section class="experience">
-    <div class="experience__container">
-
-      <div class="slider">
-
-        <div class="slider__headers">
-          <h2 class="slider__header active">Послідовні</h2>
-          <h2 class="slider__header">Клієнтоорієнтовані</h2>
-          <h2 class="slider__header">Інноваційні</h2>
-          <h2 class="slider__header">Бізнес-орієнтовані юристи</h2>
-        </div>
-
-        <div class="slider__notes">
-          <div class="slider__note active">
-            <h3 class="slider__title">Перевертаємо уявлення про юридичні послуги</h3>
-            <p class="slider__description">Консолідуючи багаторічний досвід і практику, юристи компанії супроводжують
-              складні проекти і досягають прийняття ряду важливих для галузі рішень. Багато з них формують практику
-              застосування морського права в Україні.</p>
-          </div>
-          <div class="slider__note">
-            <h3 class="slider__title">Клієнти про юридичні послуги</h3>
-            <p class="slider__description">Юристи компанії супроводжують складні проекти і досягають прийняття ряду
-              важливих для галузі рішень. Багато з них формують практику застосування морського права в Україні.</p>
-          </div>
-
-          <div class="slider__note">
-            <h3 class="slider__title">Інновіції юридичні послуги</h3>
-            <p class="slider__description">Досвід і практику, юристи компанії супроводжують
-              складні проекти і досягають прийняття ряду важливих для галузі рішень. Багато з них формують практику
-              застосування морського права в Україні.</p>
-          </div>
-
-          <div class="slider__note">
-            <h3 class="slider__title">Бізнес про юридичні послуги</h3>
-            <p class="slider__description">Супроводжують складні проекти і досягають прийняття ряду важливих для
-              галузі рішень. Багато з них формують практику застосування морського права в Україні.</p>
-          </div>
-        </div>
-
-        <div class="slider__indicators">
-          <div class="slider__indicator active"></div>
-          <div class="slider__indicator"></div>
-          <div class="slider__indicator"></div>
-          <div class="slider__indicator"></div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="services">
+  <section class="services services-header__secondary">
     <div class="services__container">
-      <div>
-        <strong>
-          <a class="services__page-link" href="">послуги
-            <svg fill="none" height="12" viewBox="0 0 8 12" width="8" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1.5L6 6L1.5 10.5" stroke-width="2"/>
-            </svg>
-          </a>
-        </strong>
-      </div>
       <h2 class="services__title">Що ми вміємо робити краще за інших?</h2>
       <div class="services__grid">
         <div class="service-item">
@@ -175,33 +106,9 @@
       </div>
     </div>
   </section>
+</header>
 
-  <section class="team">
-    <div class="team__container">
-      <div class="team__grid">
-        <div class="team__manager">
-          <img alt="managing partner" class="team__manager-image" src="assets/img/team.png">
-        </div>
-        <strong class="team__content">
-          <a class="team__page-link" href="">команда
-            <svg fill="none" height="12" viewBox="0 0 8 12" width="8" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1.5L6 6L1.5 10.5" stroke-width="2"/>
-            </svg>
-          </a>
-        </strong>
-        <h2 class="team__title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу,
-          навіть у ситуаціях, коли більшість безсилі.</h2>
-        <div class="team__person">Олександр Олександровський</div>
-        <div class="team__post">Керуючий партнер</div>
-      </div>
-      <div class="team__indicators">
-        <div class="team__indicator active"></div>
-        <div class="team__indicator"></div>
-        <div class="team__indicator"></div>
-      </div>
-    </div>
-  </section>
-
+<main class="page-main">
 
   <section class="cases">
     <div class="cases__container">
@@ -210,7 +117,7 @@
           <h3 class="case-item__title-main">Успішні кейси</h3>
         </div>
         <div class="case-item hilel">
-          <h3 class="case-item__title">Супровід проекту з<br>купівлі-продажу сільськогосподарської продукції</h3>
+          <h3 class="case-item__title">Супровід проекту з купівлі-продажу сільськогосподарської продукції</h3>
           <div class="case-item__description">Hillel IT School</div>
         </div>
         <div class="case-item biz">
@@ -218,7 +125,7 @@
           <div class="case-item__description">WannaBiz</div>
         </div>
         <div class="case-item tapgerine">
-          <h3 class="case-item__title">Супровід проекту з<br>купівлі-продажу сільськогосподарської продукції</h3>
+          <h3 class="case-item__title">Супровід проекту з купівлі-продажу сільськогосподарської продукції</h3>
           <div class="case-item__description">tapgerine</div>
         </div>
         <div class="case-item look">
@@ -236,7 +143,6 @@
       </div>
     </div>
   </section>
-
 
   <section class="clients">
     <div class="clients__container">
@@ -264,100 +170,11 @@
     </div>
   </section>
 
-
-  <section class="publications">
-    <div class="publications__container">
-      <div>
-        <strong>
-          <a class="publications__page-link" href="">Публікації
-            <svg fill="none" height="12" viewBox="0 0 8 12" width="8" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1.5L6 6L1.5 10.5" stroke-width="2"/>
-            </svg>
-          </a>
-        </strong>
-
-        <h2 class="publications__title">Нам є що розповісти</h2>
-
-        <div class="publications__content">
-          <div class="publication-item">
-            <a href=""><h3 class="publication-item__title">Валютний контроль помер, хай живе валютний контроль!</h3>
-            </a>
-            <div class="publication-item__date">14 червня</div>
-            <div class="publication-item__line"></div>
-            <div class="publication-item__description">Експерти проводять конференції, круглі столи та іншого штибу
-              заходи на тему «лібералізація валютного законодавства». Юристи-експерти-новелісти стирають пальці об
-              «ctrl+c/ctrl+v».
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <a href="">
-              <div class="publication-item__picture"><img alt="icon" class="publication-item__image"
-                                                          src="assets/img/publications/image-1.png"></div>
-              <h3 class="publication-item__title">Заповіт міленіала</h3>
-            </a>
-            <div class="publication-item__date">19 серпня</div>
-            <div class="publication-item__line"></div>
-            <div class="publication-item__description">Що і як передаватимуть у спадщину сучасні влогери, опініон лідери
-              і криптомільйонери Типовий спадок українського покоління Х виглядає так: квартира у…
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <a href="">
-              <div class="publication-item__picture"><img alt="icon" class="publication-item__image"
-                                                          src="assets/img/publications/image-2.png"></div>
-              <h3 class="publication-item__title">Equity associate</h3>
-            </a>
-            <div class="publication-item__date">22 квітня</div>
-            <div class="publication-item__line"></div>
-            <div class="publication-item__description">На проектах я джун. При цьому я співвласник юридичної фірми. Як
-              це відбулося. Перед вступом батьки мені казали, що якщо буду…
-            </div>
-          </div>
-
-          <div class="publication-item item1">
-            <a href="">
-              <div class="publication-item__picture"><img alt="icon" class="publication-item__image"
-                                                          src="assets/img/publications/image-4.png"></div>
-            </a>
-          </div>
-
-          <div class="publication-item item2">
-            <a href="">
-              <div class="publication-item__picture"><img alt="icon" class="publication-item__image"
-                                                          src="assets/img/publications/image-3.png"></div>
-              <h3 class="publication-item__title">Штраф для «Корпорації добра»: що буде з Google та іншими за порушення
-                GDPR</h3>
-            </a>
-            <div class="publication-item__date">29 вересня</div>
-            <div class="publication-item__line"></div>
-            <div class="publication-item__description">І чому стягнення у 50 млн євро може стати доленосним прецедентом
-              За матеріалами Mind.ua 21 січня Національна комісія із захисту даних.
-            </div>
-          </div>
-
-
-          <div class="publication-item item3">
-            <a href="">
-              <div class="publication-item__picture"><img alt="icon" class="publication-item__image"
-                                                          src="assets/img/publications/image-5.png"></div>
-            </a>
-          </div>
-        </div>
-        <div class="publications__shade">
-          <div class="publications__button"><a class="publications__link" href="">Ще публікації</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="page-footer footer">
   <div class="footer__container">
 
-    <div class="footer__line"></div>
     <div class="footer__content">
       <div class="footer__info">
         <div class="footer__info-content">

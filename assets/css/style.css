@@ -511,6 +511,7 @@ a {
   height: 30px;
   margin-left: auto;
   cursor: pointer;
+  z-index: 999;
 }
 .menu__btn-row {
   position: absolute;
@@ -560,6 +561,9 @@ a {
 }
 .menu__link {
   display: block;
+}
+.menu__link:hover {
+  color: #f0145a;
 }
 
 .actions {
@@ -835,7 +839,9 @@ a {
   display: grid;
   background-color: #f5f5fa;
   border-radius: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+  grid-template-columns: 1.5fr 0.5fr 1.5fr 0.4fr 2fr;
+  grid-template-rows: 57px 1fr 1fr;
+  grid-template-areas: "ttl ttl biz biz tpg" "hll hll biz biz tpg" "look adt adt clk clk";
 }
 .cases .case-item {
   display: -webkit-box;
@@ -1312,44 +1318,14 @@ a {
   }
 }
 @media (min-width: 1360px) {
-  .cases__grid {
-    grid-template-areas: "ttl biz tpg" "hll biz tpg" "look adt clk";
-  }
   .cases__title {
     border-radius: 12px 0 0 0;
   }
-  .cases .hilel {
-    min-height: 198px;
-  }
-  .cases .biz {
-    max-width: 454px;
-    min-height: 255px;
-  }
   .cases .tapgerine {
-    max-width: 454px;
-    min-height: 255px;
     border-radius: 0 12px 0 0;
   }
   .cases .look {
-    max-width: 320px;
-    min-height: 198px;
     border-radius: 0 0 0 12px;
-  }
-  .cases .adtelligent {
-    -webkit-transform: translateX(-120px);
-        -ms-transform: translateX(-120px);
-            transform: translateX(-120px);
-    margin-right: -17px;
-    max-width: 459px;
-    min-height: 198px;
-  }
-  .cases .clikky {
-    margin-right: -104px;
-    -webkit-transform: translateX(-104px);
-        -ms-transform: translateX(-104px);
-            transform: translateX(-104px);
-    max-width: 544px;
-    min-height: 198px;
   }
 }
 @media (max-width: 1359.8px) and (min-width: 320px) {
@@ -1361,9 +1337,6 @@ a {
   }
 }
 @media (max-width: 1359.8px) and (min-width: 576px) {
-  .cases__grid {
-    grid-template-areas: "ttl ttl" "hll biz" "tpg look" "adt clk";
-  }
   .cases__title {
     border-radius: 12px 12px 0 0;
   }
@@ -1428,6 +1401,12 @@ a {
   .services-header__grid {
     padding-top: 20px;
     grid-template-areas: "actions actions" "logo menu";
+  }
+}
+@media (max-width: 991.8px) and (min-width: 320px) {
+  .cases__grid {
+    grid-template-areas: "ttl" "hll" "biz" "tpg" "look" "adt" "clk";
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (max-width: 991.8px) and (min-width: 576px) {
@@ -1560,9 +1539,6 @@ a {
   }
   .team__post {
     margin-top: -15px;
-  }
-  .cases__grid {
-    grid-template-areas: "ttl" "hll" "biz" "tpg" "look" "adt" "clk";
   }
   .clients__items {
     grid-template-areas: "hll biz" "tpg look" "eco clk" "org infra" "card art" "city adt";

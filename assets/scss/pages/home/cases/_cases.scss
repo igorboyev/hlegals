@@ -12,18 +12,15 @@
     display: grid;
     background-color: $color-gray-bg;
     border-radius: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+    grid-template-columns: 1.5fr 0.5fr 1.5fr 0.4fr 2fr;
+    //grid-template-columns: 320px 113px 340px 114px 433px;
+    grid-template-rows: 57px 1fr 1fr;
+    grid-template-areas: "ttl ttl biz biz tpg" "hll hll biz biz tpg" "look adt adt clk clk";
 
-    @include ul-min {
-      grid-template-areas: "ttl biz tpg" "hll biz tpg" "look adt clk";
-    }
 
-    @include ul-xs {
-      grid-template-areas: "ttl ttl" "hll biz" "tpg look" "adt clk";
-    }
-
-    @include xs-xx {
+    @include md-xx {
       grid-template-areas: "ttl" "hll" "biz" "tpg" "look" "adt" "clk";
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
@@ -69,26 +66,16 @@
 
   & .hilel {
     grid-area: hll;
-    @include ul-min {
-      min-height: 198px;
-    }
   }
 
   & .biz {
     grid-area: biz;
-
-    @include ul-min {
-      max-width: 454px;
-      min-height: 255px;
-    }
   }
 
   & .tapgerine {
     grid-area: tpg;
 
     @include ul-min {
-      max-width: 454px;
-      min-height: 255px;
       border-radius: 0 12px 0 0;
     }
   }
@@ -97,8 +84,6 @@
     grid-area: look;
 
     @include ul-min {
-      max-width: 320px;
-      min-height: 198px;
       border-radius: 0 0 0 12px;
     }
   }
@@ -106,13 +91,6 @@
   & .adtelligent {
     grid-area: adt;
 
-
-    @include ul-min {
-      transform: translateX(-120px);
-      margin-right: -17px;
-      max-width: 459px;
-      min-height: 198px;
-    }
     @include ul-xs {
       border-radius: 0 0 0 12px;
 
@@ -123,12 +101,5 @@
     grid-area: clk;
     border-radius: 0 0 12px 0;
 
-
-    @include ul-min {
-      margin-right: -104px;
-      transform: translateX(-104px);
-      max-width: 544px;
-      min-height: 198px;
-    }
   }
 }
