@@ -110,4 +110,15 @@
     cursor: pointer;
     transform: translateX(-50%);
   }
+
+  &__separator {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: $color-gray-text;
+    @include sm-xx {
+      display: none;
+    }
+  }
+
 }
