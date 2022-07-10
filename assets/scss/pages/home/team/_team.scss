@@ -2,7 +2,7 @@
 @use "../../../mixins/index" as *;
 
 .team {
-  padding-top: 60px;
+  padding-bottom: 40px;
 
   &__container {
     @extend %container;
