@@ -25,6 +25,7 @@
     font-weight: 700;
 
     gap: 2px;
+
   }
 
   &__language-link {
@@ -34,8 +35,16 @@
 
     border-radius: 8px;
 
+    &:hover {
+      color: $color-accent;
+    }
+
     &.active {
       background-color: $color-accent;
+
+      &:hover {
+        background-color: $color-white;
+      }
     }
   }
 

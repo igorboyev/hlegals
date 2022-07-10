@@ -3,6 +3,7 @@
 
 .services-header {
   background: linear-gradient($bg-gradient2);
+  border-radius: 0 0 12px 12px;
 
   &__logo {
     grid-area: logo;
