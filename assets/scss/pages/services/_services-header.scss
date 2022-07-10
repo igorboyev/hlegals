@@ -2,8 +2,8 @@
 @use "../../mixins/index" as *;
 
 .services-header {
-  background: linear-gradient($bg-gradient2);
   border-radius: 0 0 12px 12px;
+  background: linear-gradient($bg-gradient2);
 
   &__logo {
     grid-area: logo;
@@ -51,11 +51,9 @@
     @include md-min {
       justify-content: flex-end;
     }
-
     @include md-sm {
       justify-content: center;
     }
-
     @include sm {
       justify-content: space-between;
       a {

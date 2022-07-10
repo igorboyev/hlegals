@@ -699,26 +699,6 @@ a {
   background: -o-linear-gradient(230deg, #323264 12%, #323264 57%, #643E72 87%);
   background: linear-gradient(220deg, #323264 12%, #323264 57%, #643E72 87%);
 }
-.services::before {
-  position: absolute;
-  top: 100%;
-  right: 20px;
-  left: 20px;
-  height: 20px;
-  content: "";
-  border-radius: 0 0 12px 12px;
-  background-color: #e6e6f0;
-}
-.services::after {
-  position: absolute;
-  top: 100%;
-  right: 10px;
-  left: 10px;
-  height: 10px;
-  content: "";
-  border-radius: 0 0 12px 12px;
-  background-color: #b3b3ba;
-}
 .services__page-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -752,6 +732,29 @@ a {
 .service-item__description {
   color: #ffffff;
   line-height: 1.44;
+}
+
+.services-shadow-dark {
+  margin-left: 20px;
+  width: calc(100% - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 10px;
+  background: #c9c9db;
+  border-radius: 0 0 12px 12px;
+}
+
+.services-shadow-light {
+  margin-left: 40px;
+  width: calc(100% - 80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 10px;
+  background: #e7e7f2;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 60px;
 }
 
 .team {
@@ -1302,6 +1305,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  border-top: 4px solid rgba(255, 255, 255, 0.5);
 }
 .service-header .page-service-variables li {
   list-style-type: none;
@@ -1316,6 +1320,7 @@ a {
   font-size: 24px;
   line-height: 28px;
   color: #ffffff;
+  padding-top: 20px;
 }
 .service-header .page-service-variables__content {
   display: -webkit-box;
@@ -1338,7 +1343,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
 }
 .service-header .page-service-variables__list-right {
   display: -webkit-box;
@@ -1349,7 +1353,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 54%;
 }
 .service-header .page-service-variables__item {
   font-size: 18px;
@@ -1391,27 +1394,13 @@ a {
   margin-top: 40px;
 }
 
-.services-shadow-light {
-  margin-left: 20px;
-  width: calc(100% - 40px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 10px;
-  background: #CACADB;
-  border-radius: 0 0 12px 12px;
-}
-
-.services-shadow-dark {
-  margin-left: 40px;
-  width: calc(100% - 80px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 10px;
-  background: #E7E7F2;
-  border-radius: 0 0 12px 12px;
-  margin-bottom: 60px;
+@media (min-width: 576px) {
+  .service-header .page-service-variables__list-left {
+    width: 50%;
+  }
+  .service-header .page-service-variables__list-right {
+    width: 54%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1868,5 +1857,12 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .service-header .page-service-variables__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
   }
 }

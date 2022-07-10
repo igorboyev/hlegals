@@ -4,33 +4,32 @@
 .clients {
   padding-top: 30px;
 
-  &__container {
 
-  }
 
   &__content {
     text-align: center;
   }
 
   &__title {
-    font-size: 14px;
-    line-height: 17px;
+    padding-bottom: 30px;
+
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-primary;
-    padding-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 17px;
   }
 
   &__items {
     display: grid;
+
     @include md-min {
       grid-template-areas: "hll biz tpg look" "org  adt clk eco" "infra city art card";
-
     }
-
     @include md-xs {
       grid-template-areas: "hll biz tpg" "look eco clk" "adt org infra" "city art card";
-
     }
     @include xs-xx {
       grid-template-areas: "hll biz" "tpg look" "eco clk" "org infra" "card art" "city adt";

@@ -2,74 +2,88 @@
 @use "../../../mixins/index" as *;
 
 .service-header {
+  border-radius: 0 0 12px 12px;
   background-image: url("../img/service-page/service-header.png");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 0 0 12px 12px;
 
 
   .page-service {
-
     &__wrapper {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
 
     &-item {
       display: flex;
-      flex-direction: column;
-      text-align: center;
-      max-width: 860px;
-      gap: 30px;
       align-items: center;
+      flex-direction: column;
+
+      max-width: 860px;
       padding-bottom: 80px;
+
+      text-align: center;
+
+      gap: 30px;
 
       &__title {
         font-size: 42px;
         line-height: 50px;
+
         @extend %text-liner-gradient2;
       }
 
       &__description {
         display: flex;
         flex-direction: column;
+
         gap: 30px;
 
         &-content {
+          color: $color-white;
+
           font-size: 21px;
           line-height: 1.43;
-          color: $color-white;
         }
       }
 
       &__button {
-        font-weight: 700;
         display: flex;
         justify-content: center;
-        color: $color-white;
+
         width: 250px;
         height: 50px;
+        margin-top: 10px;
+
+        color: $color-white;
+        border: none;
+        border-radius: 12px;
         background: $color-active;
         box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-        border-radius: 12px;
-        border: none;
-        margin-top: 10px;
+
+        font-weight: 700;
 
         &-link {
           display: flex;
+          align-items: center;
+
+          padding: 0 35px 0;
+
           font-size: 14px;
           line-height: 17px;
-          align-items: center;
-          padding: 0 35px 0;
         }
       }
     }
 
     &-variables {
-      max-width: 1100px;
       display: flex;
       flex-direction: column;
+
+      max-width: 1100px;
+
+      border-top: 4px solid rgba($color-white, 0.5);
+
       gap: 20px;
 
       li {
@@ -77,45 +91,65 @@
       }
 
       li:before {
-        font-weight: 700;
-        color: $color-accent;
-        content: "•";
         padding-right: 8px;
+
+        content: "•";
+
+        color: $color-accent;
+
+        font-weight: 700;
       }
 
       &__title {
+        padding-top: $gap;
+
+        color: $color-white;
+
         font-size: 24px;
         line-height: 28px;
-        color: $color-white;
       }
 
       &__content {
         display: flex;
         justify-content: center;
-        gap: 75px;
+
+        width: 95%;
         margin: 0 auto;
         padding-bottom: 100px;
-        width: 95%;
+
+        gap: 75px;
+        @include xs-xx {
+          flex-direction: column;
+
+          gap: $gap;
+        }
       }
 
       &__list-left {
         display: flex;
-        gap: $gap;
         flex-direction: column;
-        width: 50%;
+
+        gap: $gap;
+        @include xs-min {
+          width: 50%;
+        }
       }
 
       &__list-right {
         display: flex;
-        gap: $gap;
         flex-direction: column;
-        width: 54%;
+
+        gap: $gap;
+        @include xs-min {
+          width: 54%;
+        }
       }
 
       &__item {
+        color: $color-white;
+
         font-size: 18px;
         line-height: 1.44;
-        color: $color-white;
       }
     }
   }
@@ -166,11 +200,9 @@
     @include md-min {
       justify-content: flex-end;
     }
-
     @include md-sm {
       justify-content: center;
     }
-
     @include sm {
       justify-content: space-between;
       a {
@@ -181,25 +213,7 @@
 }
 
 .publications-gray {
-  background-color: $color-gray-bg;
   margin-top: 40px;
-}
 
-.services-shadow-light {
-  margin-left: 20px;
-  width: calc(100% - 40px);
-  display: flex;
-  min-height: 10px;
-  background: #CACADB;
-  border-radius: 0 0 12px 12px;
-}
-
-.services-shadow-dark {
-  margin-left: 40px;
-  width: calc(100% - 80px);
-  display: flex;
-  min-height: 10px;
-  background: #E7E7F2;
-  border-radius: 0 0 12px 12px;
-  margin-bottom: 60px;
+  background-color: $color-gray-bg;
 }

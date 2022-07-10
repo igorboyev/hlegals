@@ -10,14 +10,14 @@
 
   &__grid {
     display: grid;
-    background-color: $color-gray-bg;
+
     border-radius: 12px;
+    background-color: $color-gray-bg;
+
+    grid-template-areas: "ttl ttl biz biz tpg" "hll hll biz biz tpg" "look adt adt clk clk";
     grid-template-columns: 1.5fr 0.5fr 1.5fr 0.4fr 2fr;
     //grid-template-columns: 320px 113px 340px 113px 433px;
     grid-template-rows: 57px 1fr 1fr;
-    grid-template-areas: "ttl ttl biz biz tpg" "hll hll biz biz tpg" "look adt adt clk clk";
-
-
     @include md-xx {
       grid-template-areas: "ttl" "hll" "biz" "tpg" "look" "adt" "clk";
       grid-template-columns: repeat(1, 1fr);
@@ -28,34 +28,41 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border: 1px solid $color-white;
+
     padding: 20px;
+
+    border: 1px solid $color-white;
+
     gap: $gap;
 
     &__title {
-      font-size: 24px;
-      line-height: 28px;
       color: $color-primary-soft;
 
+      font-size: 24px;
+      line-height: 28px;
+
       &-main {
+        text-transform: uppercase;
+
         color: $color-accent;
+
         font-size: 14px;
         line-height: 17px;
-        text-transform: uppercase;
       }
     }
 
     &__description {
+      color: $color-gray-text;
+
       font-size: 18px;
       line-height: 26px;
-      color: $color-gray-text;
     }
   }
 
   &__title {
-    grid-area: ttl;
     min-height: 57px;
 
+    grid-area: ttl;
     @include ul-min {
       border-radius: 12px 0 0 0;
     }
@@ -74,7 +81,6 @@
 
   & .tapgerine {
     grid-area: tpg;
-
     @include ul-min {
       border-radius: 0 12px 0 0;
     }
@@ -82,7 +88,6 @@
 
   & .look {
     grid-area: look;
-
     @include ul-min {
       border-radius: 0 0 0 12px;
     }
@@ -90,16 +95,14 @@
 
   & .adtelligent {
     grid-area: adt;
-
     @include ul-xs {
       border-radius: 0 0 0 12px;
-
     }
   }
 
   & .clikky {
-    grid-area: clk;
     border-radius: 0 0 12px 0;
 
+    grid-area: clk;
   }
 }
