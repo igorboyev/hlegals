@@ -506,6 +506,14 @@ a {
   border-radius: 3px;
   background: #b3b3ba;
 }
+.page-header__facebook-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.page-header__facebook-logo:hover {
+  fill: #f0145a;
+}
 
 .menu {
   -ms-flex-item-align: center;
@@ -597,7 +605,8 @@ a {
   border-radius: 8px;
 }
 .actions__language-link:hover {
-  color: #f0145a;
+  color: #b3b3ba;
+  background-color: #ededf7;
 }
 .actions__language-link.active {
   background-color: #f0145a;

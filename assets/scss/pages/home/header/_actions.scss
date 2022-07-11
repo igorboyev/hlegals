@@ -35,7 +35,8 @@
     border-radius: 8px;
 
     &:hover {
-      color: $color-accent;
+      color: $color-gray-text;
+      background-color: $color-gray-bg-alt;
     }
 
     &.active {
@@ -60,6 +61,7 @@
   }
 
   &__socials {
+
     @include sm {
       display: none;
     }

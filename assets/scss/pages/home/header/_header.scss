@@ -122,4 +122,12 @@
       display: none;
     }
   }
+
+  &__facebook-logo {
+    display: flex;
+
+    &:hover {
+      fill: $color-accent;
+    }
+  }
 }
