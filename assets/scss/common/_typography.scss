@@ -48,4 +48,8 @@ a {
 
 .active-header-list {
   border-bottom: 2px solid $color-white;
+
+  &:hover {
+    border-bottom: 2px solid $color-accent;
+  }
 }

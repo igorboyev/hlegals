@@ -2,7 +2,6 @@
 @use "../../../mixins/index" as *;
 
 .cases {
-
   &__container {
     @extend %container;
   }
@@ -39,6 +38,7 @@
 
       font-size: 24px;
       line-height: 28px;
+      font-weight: 500;
 
       &-main {
         text-transform: uppercase;

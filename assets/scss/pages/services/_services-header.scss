@@ -42,23 +42,4 @@
       grid-template-areas: "actions actions" "logo menu";
     }
   }
-
-  .actions-secondary {
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-    @include md-min {
-      justify-content: flex-end;
-    }
-    @include md-sm {
-      justify-content: center;
-    }
-    @include sm {
-      justify-content: space-between;
-      a {
-        color: $color-gray-text;
-      }
-    }
-  }
 }

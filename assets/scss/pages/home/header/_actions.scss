@@ -40,10 +40,13 @@
     }
 
     &.active {
+      color: $color-white;
       background-color: $color-accent;
 
+
       &:hover {
-        background-color: $color-white;
+        background-color: $color-gray-bg-alt;
+        color: $color-gray-text;
       }
     }
   }
@@ -61,7 +64,6 @@
   }
 
   &__socials {
-
     @include sm {
       display: none;
     }

@@ -22,12 +22,11 @@
       max-width: 860px;
       padding-bottom: 80px;
 
-
       gap: 30px;
-
       @include xs-min {
-        text-align: center;
         align-items: center;
+
+        text-align: center;
       }
 
       &__title {
