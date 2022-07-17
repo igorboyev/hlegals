@@ -51,10 +51,32 @@
 
       grid-template-areas: "actions actions" "logo menu";
     }
+
+    &_secondary {
+      display: grid;
+
+      @extend %container;
+      gap: $gap;
+      grid-template-columns: auto 1fr;
+      @include sm-min {
+        padding-top: 50px;
+
+        grid-template-areas: "logo actions" "logo menu";
+      }
+      @include md {
+        padding-top: $gap;
+
+        grid-template-areas: "actions actions" "logo menu";
+      }
+    }
   }
 
   &__logo {
     grid-area: logo;
+
+    &-image {
+      width: 85%;
+    }
   }
 
   &__menu {
@@ -128,6 +150,14 @@
 
     &:hover {
       fill: $color-accent;
+    }
+
+    &_secondary {
+      fill: $color-gray-text;
+
+      &:hover {
+        fill: $color-accent;
+      }
     }
   }
 }

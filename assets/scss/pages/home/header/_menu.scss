@@ -47,6 +47,35 @@
       &:nth-of-type(3) {
         top: 24px;
       }
+
+      &_secondary {
+        position: absolute;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 5px;
+
+        transition: 0.25s ease-in-out;
+        transform: rotate(0deg);
+
+        opacity: 1;
+        border-radius: 5px;
+        background-color: $color-primary;
+
+        &:nth-of-type(1) {
+          top: 0;
+        }
+
+        &:nth-of-type(2) {
+          top: 12px;
+        }
+
+        &:nth-of-type(3) {
+          top: 24px;
+        }
+      }
     }
 
     &.active span {
@@ -108,6 +137,18 @@
 
     &:hover {
       color: $color-accent;
+    }
+
+    &-secondary {
+      color: $color-active;
+
+      &:hover {
+        color: $color-accent;
+      }
+
+      &-active {
+        color: $color-accent;
+      }
     }
   }
 }
