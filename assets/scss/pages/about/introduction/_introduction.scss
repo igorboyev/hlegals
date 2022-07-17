@@ -1,0 +1,103 @@
+@use "../../../presets/index" as *;
+@use "../../../mixins/index" as *;
+
+.introduction {
+  @include lg-min {
+    padding-top: 80px;
+  }
+
+  @include lg-md {
+    padding-top: 50px;
+  }
+  @include md-xx {
+    padding-top: 20px;
+  }
+
+  &__container {
+    @extend %container-small;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include sm-min {
+      gap: $gap-md;
+    }
+
+    @include sm-xx {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    @include sm-min {
+      max-width: 58%;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 42px;
+    line-height: 50px;
+    @extend %text-liner-gradient2;
+
+    @include sm-xx {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  &__description {
+    font-size: 21px;
+    line-height: 1.43;
+    margin-bottom: 20px;
+
+    @include sm-xx {
+      font-size: 18px;
+      line-height: 1.44;
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+    gap: $gap-md;
+
+    @include sm-min {
+      max-width: 42%;
+      border-left: 4px solid $color-gray-separator;
+    }
+    @include sm-xx {
+      margin-bottom: 35px;
+      gap: $gap;
+      border-top: 4px solid $color-gray-separator;
+    }
+
+    &-wrapper {
+      @include sm-min {
+        padding-left: $gap;
+      }
+
+      &_small {
+        @include sm-min {
+          padding-left: 20px;
+        }
+        @include sm-xx {
+          padding-top: 15px;
+        }
+      }
+    }
+
+    &-image {
+      margin-bottom: 10px;
+    }
+
+    &-description {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}
